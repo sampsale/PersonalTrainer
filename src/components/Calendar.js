@@ -42,7 +42,7 @@ export default function Calendar() {
     <Paper>
     <Scheduler
     data={dates}
-    height={600}
+    
     >
       <ViewState
       defaultCurrentDate={currentDate}
