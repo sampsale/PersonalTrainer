@@ -1,0 +1,21 @@
+.photo {
+    height: 50vh;
+    width: 40vw;
+  }
+h1,h2,h3,p,img {
+    margin-left: 20px;
+    
+}
+.header{
+  font-weight: 900;
+  font-size: 20px;
+}
+.outer-div {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.buttons {
+  margin-top: 2px;
+
+}
