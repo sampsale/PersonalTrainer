@@ -6,7 +6,7 @@ import TabApp from './components/TabApp';
 function App() {
   return (
     <div>
-      <TabApp/>
+      <TabApp />
     </div>
   );
 }

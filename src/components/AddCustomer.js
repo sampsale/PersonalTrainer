@@ -4,40 +4,40 @@ import SendIcon from '@mui/icons-material/Send';
 import '../styles.css';
 
 
-export default function AddCustomer(props){
+export default function AddCustomer(props) {
     const [open, setOpen] = React.useState(false)
     const [customer, setCustomer] = React.useState(
-        { firstname:'', lastname:'',  address:'', postcode:'', city:'', email:'',  phone:''}
+        { firstname: '', lastname: '', address: '', postcode: '', city: '', email: '', phone: '' }
     )
 
     // when opened
-    const handleClickOpen = () =>{
+    const handleClickOpen = () => {
         setOpen(true)
     }
 
     // handle input change, set new customer
-    const handleChange = (e) =>{
-        setCustomer({...customer, [e.target.name]: e.target.value})
+    const handleChange = (e) => {
+        setCustomer({ ...customer, [e.target.name]: e.target.value })
         console.log(customer)
     }
 
     //when closed
-    const handleClose = () =>{
+    const handleClose = () => {
         setOpen(false)
     }
 
     //post method
-    const addCustomer = () =>{
+    const addCustomer = () => {
         props.saveCustomer(customer)
         handleClose()
     }
 
     return (
         <div>
-            <Button size="small" variant="contained"   onClick={handleClickOpen}
-            style={{ marginTop: 3}}
-           >Add new customer</Button>
-           
+            <Button size="small" variant="contained" onClick={handleClickOpen}
+                style={{ marginTop: 3 }}
+            >Add new customer</Button>
+
             <Dialog open={open} onClose={handleClose}>
                 <DialogTitle>New customer</DialogTitle>
                 <DialogContent>
@@ -46,7 +46,7 @@ export default function AddCustomer(props){
                         margin='dense'
                         name='firstname'
                         value={customer.firstname}
-                        onChange={e=> handleChange(e)}
+                        onChange={e => handleChange(e)}
                         label='First name'
                         fullWidth
                         variant='standard'
@@ -55,7 +55,7 @@ export default function AddCustomer(props){
                         margin='dense'
                         name='lastname'
                         value={customer.lastname}
-                        onChange={e=> handleChange(e)}
+                        onChange={e => handleChange(e)}
                         label='Last name'
                         fullWidth
                         variant='standard'
@@ -64,7 +64,7 @@ export default function AddCustomer(props){
                         margin='dense'
                         name='streetaddress'
                         value={customer.streetaddress}
-                        onChange={e=> handleChange(e)}
+                        onChange={e => handleChange(e)}
                         label='Address'
                         fullWidth
                         variant='standard'
@@ -73,7 +73,7 @@ export default function AddCustomer(props){
                         margin='dense'
                         name='postcode'
                         value={customer.postcode}
-                        onChange={e=> handleChange(e)}
+                        onChange={e => handleChange(e)}
                         label='Postcode'
                         fullWidth
                         variant='standard'
@@ -82,7 +82,7 @@ export default function AddCustomer(props){
                         margin='dense'
                         name='city'
                         value={customer.city}
-                        onChange={e=> handleChange(e)}
+                        onChange={e => handleChange(e)}
                         label='City'
                         fullWidth
                         variant='standard'
@@ -91,7 +91,7 @@ export default function AddCustomer(props){
                         margin='dense'
                         name='email'
                         value={customer.email}
-                        onChange={e=> handleChange(e)}
+                        onChange={e => handleChange(e)}
                         label='Email'
                         fullWidth
                         variant='standard'
@@ -100,7 +100,7 @@ export default function AddCustomer(props){
                         margin='dense'
                         name='phone'
                         value={customer.phone}
-                        onChange={e=> handleChange(e)}
+                        onChange={e => handleChange(e)}
                         label='Phone'
                         fullWidth
                         variant='standard'
