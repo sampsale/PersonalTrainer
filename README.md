@@ -4,10 +4,10 @@ Front end -ohjelmointi kurssin lopputehtävä. Löytyy hostattuna osoitteesta ht
 
 Tehty Reactilla, käytetyt kirjastot mm.
 
-MUI
+- MUI
 
-AgGrid
+- AgGrid
 
-React Scheduler
+- React Scheduler
 
-Recharts
+- Recharts
